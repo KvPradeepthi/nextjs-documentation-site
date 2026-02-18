@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Documentation Portal API",
+    "version": "1.0.0",
+    "description": "API for the Next.js Documentation Portal"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/docs": {
+      "get": {
+        "summary": "Get documentation list",
+        "tags": ["Documentation"],
+        "responses": {
+          "200": {
+            "description": "List of documentation pages"
+          }
+        }
+      }
+    },
+    "/docs/{slug}": {
+      "get": {
+        "summary": "Get documentation page",
+        "tags": ["Documentation"],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Documentation page content"
+          },
+          "404": {
+            "description": "Page not found"
+          }
+        }
+      }
+    }
+  }
+}
