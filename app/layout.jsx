@@ -6,10 +6,6 @@ import { ThemeProvider } from 'next-themes';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
