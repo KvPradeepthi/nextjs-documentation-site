@@ -22,7 +22,7 @@ export default function Sidebar() {
   const currentVersion = segments.find(v => VERSIONS.includes(v)) || 'v1';
   const currentLocale = segments.find(l => ['en', 'es', 'fr', 'de'].includes(l)) || 'en';
 
-  const switchVersion = (version: string) => {
+  const switchVersion = (version: => {
     const newPath = pathname.replace(currentVersion, version);
     router.push(newPath);
   };
