@@ -4,14 +4,6 @@ import TableOfContents from '@/components/TableOfContents';
 import CodeBlock from '@/components/CodeBlock';
 import FeedbackWidget from '@/components/FeedbackWidget';
 
-interface DocPageProps {
-  params: {
-    locale: string;
-    version: string;
-    slug: string;
-  };
-}
-
 export async function generateStaticParams() {
   const versions = ['v1', 'v2', 'v3'];
   const locales = ['en', 'es', 'fr', 'de'];
