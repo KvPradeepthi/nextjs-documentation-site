@@ -16,7 +16,7 @@ export default function Header() {
 
   const currentLocale = pathname?.split('/')[1] || 'en';
 
-  const switchLanguage = (locale: string) => {
+  const switchLanguage = (locale: => {
     const pathSegments = pathname.split('/');
     if (LOCALES.includes(pathSegments[1])) {
       pathSegments[1] = locale;
